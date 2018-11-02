@@ -289,12 +289,12 @@ It’s a fairly common pattern in Hive to persist results into a table. It is ca
 1.	Paste the following script into a new Worksheet, then click the Execute button:
 
 	```
-CREATE TABLE avg_mileage
-STORED AS ORC
-AS
-SELECT truckid, avg(mpg) avgmpg
-FROM truck_mileage
-GROUP BY truckid;
+	CREATE TABLE avg_mileage
+	STORED AS ORC
+	AS
+	SELECT truckid, avg(mpg) avgmpg
+	FROM truck_mileage
+	GROUP BY truckid;
 	```
 
 We now can create Hive tables with **CREATE TABLE** and load data into them using the **LOAD DATA INPATH** command. Additionally, we learned how to change the file format of the tables to ORC, so hive is more efficient at reading, writing and processing this data. We learned to grab parameters from our existing table using **SELECT {column_name…} FROM {table_name}** to create a new filtered table.
