@@ -113,6 +113,19 @@ Hadoop provides a lot of web-based applications. In order to use them from outsi
 
 In the Overview of HDP you can find an architectural breakdown of Apache Hadoop and the Hortonworks Data Platform.
 
+##Accessing CLI
+
+To access the sandbox through a terminal you can either connect through a SSH client or use the built-in web client, if you don’t have a SSH client installed.
+
+Access the build-in Web client, click on the link under advanced options (<http://sandbox:4200/>. Enter the username and password as entered above when creating the VM. 
+
+Access the sandbox over a SSH client (Terminal on Linux / Mac, Putty on Windows). In the terminal, enter the following command
+
+```
+ssh root@sandbox -p 2222
+```
+
+
 ##Services Provided by the Sandbox
 
 Service  | URL
