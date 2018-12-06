@@ -1,7 +1,7 @@
 # Data Manipulation with Spark
 In this workshop we will implement some basic operations using the Spark DataFrame API from Python. 
 
-##Introduction
+## Introduction
 In this tutorial we will introduce working with Apache Spark DataFrames. We will use the same data as in Workshop 4 – Data Manipulation with Hive. This workshop can be done on the Hortonworks sandbox, using the data in Hive. On the other hand, it can also be done on a simpler environment using Docker. This is how it is shown below, but to adapt it to Hortonworks should be quite easy. 
 
 ## Pre-Requisites
@@ -44,15 +44,15 @@ Let’s now start working with the Trucks data, which we have uploaded with the 
 5. First let's display the spark version we are using in the interpreter. Make sure that you use the directive `%pyspark3` and no longer `%md`. `%pyspark3` will tell Zepplin that you want to use the Python Spark API. Execute the cell using **Shift+Enter**.
 
 	```
-%pyspark3
-spark.version
+	%pyspark3
+	spark.version
 	```
 
 5. Now let’s start using some code. First let’s import the spark python API. 
 
 	```
-%pyspark3
-from pyspark.sql.types import *
+	%pyspark3
+	from pyspark.sql.types import *
 	```
 
 6.	Enter Shift+Enter to execute the paragraph. This will take a while, as the local Spark Cluster gets initialized. The successful execution will get confirmed by a Took NN sec …. message below the cell. 
