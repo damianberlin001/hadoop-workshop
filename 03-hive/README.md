@@ -1,10 +1,10 @@
 # Data Manipulation with Hive
 In this workshop we will work with Hive to analyze data through SQL.
 
-##Introduction
+## Introduction
 In this tutorial, you will be introduced to Apache(TM) Hive. In the earlier section, we covered how to load data into HDFS. So now you have geolocation and trucks files stored in HDFS as csv files. In order to use this data in Hive, we will guide you on how to create a table and how to move data into a Hive warehouse, from where it can be queried. We will analyze this data using SQL queries in Hive User Views and store it as ORC. We will also walk through Apache Tez and how a DAG is created when you specify Tez as execution engine for Hive. Let’s start..!!
 
-##Pre-Requisites
+## Pre-Requisites
 * Create a HDP sandbox VM on Azure or download the latest Hortonworks Sandbox
 * Workshop 2: Load data into HDFS. You can get the important data for this
 workshop by downloading the ZIP file from here: https://bit.ly/2jYXQBf
