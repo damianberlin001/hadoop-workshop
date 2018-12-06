@@ -113,7 +113,7 @@ Hadoop provides a lot of web-based applications. In order to use them from outsi
 
 In the Overview of HDP you can find an architectural breakdown of Apache Hadoop and the Hortonworks Data Platform.
 
-##Accessing CLI
+## Accessing CLI
 
 To access the sandbox through a terminal you can either connect through a SSH client or use the built-in web client, if you don’t have a SSH client installed.
 
@@ -126,13 +126,14 @@ ssh root@sandbox -p 2222
 ```
 
 
-##Services Provided by the Sandbox
+## Services Provided by the Sandbox
 
 Service  | URL
 ------------- | -------------
 Sandbox Welcome Page | <http://sandbox:8888>
 Ambari Dashboard	 | <http://sandbox:8080>
 Ambari Views | <http://sandbox:8080/#/main/views>
-Hive 2.0 View | <http://sandbox:8080/#/main/view/HIVE/auto_hive20_instance>File View | <http://sandbox:8080/#/main/view/FILES/auto_files_instance>
+Hive 2.0 View | <http://sandbox:8080/#/main/view/HIVE/auto_hive20_instance>
+File View | <http://sandbox:8080/#/main/view/FILES/auto_files_instance>
 SSH Web Client | <http://sandbox:4200>
 Zeppelin| <http://sandbox:9995>
