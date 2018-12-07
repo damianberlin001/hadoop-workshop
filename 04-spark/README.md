@@ -48,6 +48,14 @@ Let’s now start working with the Trucks data, which we have uploaded with the 
 	spark.version
 	```
 
+5. Make sure that the data is in the right place. You can use the directive `%sh` to execute a shell action.
+
+	```
+	%sh
+	hadoop fs -ls /user/maria-dev/truckdata
+	```
+
+
 5. Now let’s start using some code. First let’s import the spark python API. 
 
 	```
@@ -110,7 +118,7 @@ Let’s now start working with the Trucks data, which we have uploaded with the 
 	trucksRawDF.write.json("/user/maria-dev/truckdata/truck-json")
 	```
 	
-	Should you want to execute it a 2nd time, then you first have to delete the folder truck-json, otherwise the 2nd execution will throw an error. You can directly execute a shell command from Zeppelin, using the %sh directive. 
+	Should you want to execute it a 2nd time, then you first have to delete the folder truck-json, otherwise the 2nd execution will throw an error. You can directly execute the remove from within Zeppelin, using the `%sh` directive. 
 
 	```
 	%sh
@@ -118,6 +126,7 @@ Let’s now start working with the Trucks data, which we have uploaded with the 
 	```
 	
 By that we have imported the truck data and it is available as the trucksRawDF Data Frame. We will come back to it later. First let’s do the same for the geolocation data. 
+
 ### Access the geolocation data
 
 1.	Add some markdown to show that we are now working with geolocation data
@@ -274,7 +283,16 @@ Now let’s use that technique to do some restructuring (transformation) of the 
 	truckMileageDF.write.parquet('/user/maria-dev/truckdata/truckmileage-parquet')
 	```
 	
-7.	Let's also register the truck mileage data as a table 
+7.	Let's also tryout the Avro format.
+
+	```
+	%pyspark3
+	truckMileageDF.write.avro('/user/maria-dev/truckdata/truckmileage-avro')
+	```
+
+   It will complain with an error, as Avro support is not included out-of-the-box. We have to add an additional library to the interpreter. 
+
+8.	Finally also register the truck mileage data as a table 
 
 	```
 	%pyspark3
