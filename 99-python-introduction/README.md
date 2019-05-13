@@ -4,7 +4,7 @@ In this workshop you learn the basics of the Python programming language.
 
 We assume that the **Analytics platform** decribed [here](../00-environment) is running and accessible. 
 
-## Working with Python
+## Accessing Python Environment
 
 Python is a scripting language, which makes it easy to learn and use. There are various ways for trying out python
  
@@ -75,9 +75,7 @@ In a browser window, navigate to <http://analyticsplatform:38081> and you should
 
 From here you can either create a new Notebook or import an existing one. 
 
-Import the `Python Tutorial 1.json` and execute each single cell and make sure you understand what happens. 
-
-Import the `Python Tutorial 2.json` and execute each single cell and make sure you understand what happens. 
+To create a new notebook, click on the **Create new note** link. To import an existing notebook, click on the **Import note** link and browse to the file you whish to import. 
 
 ### Using Jupyter
 
@@ -91,5 +89,21 @@ You should be forwared to the Jupyter homepage.
 
 ## Python Tutorial
 
+The python tutorial is split into two parts:
+
 * [Python Tutorial 1](./python-tutorial-1.md)
 * [Python Tutorial 2](./python-tutorial-2.md)
+
+You can either follow it step by step and enter the commands manually or import the finished notebooks either into **Apache Zeppelin** or **Jupyter**.
+
+### Apache Zeppelin
+
+Impor `Python Tutorial 1.json` and `Python Tutorial 2.json` and execute each single cell and make sure you understand what happens. 
+
+Make sure that you change the interpreter order before you execute the notebook by clicking on the **Interpreter binding** icon in the upper right corner and move the **python** interpreter to the top by drag-and-dropx as shown below
+
+![Alt Image Text](./images/zeppelin-interpreter-order.png "Open Hdfs Files View")
+
+### Jupyter
+
+Import the following `python-tutorial-1.ipynb` and `python-tutorial-2.ipynb` and execute each single cell and make sure you understand what happens. 
