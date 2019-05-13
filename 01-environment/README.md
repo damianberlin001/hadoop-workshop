@@ -17,30 +17,20 @@ You have the follwing options to start the environment:
 These steps are necessary after the starting the docker environment. 
 
 ### Add entry to local /etc/hosts File
-To simplify working with the Streaming Platform and for the links below to work, add the following entry to your local `/etc/hosts` file. 
+To simplify working with the Analytics Platform and for the links below to work, add the following entry to your local `/etc/hosts` file. 
 
 ```
-40.91.195.92	nosqlplatform
+40.91.195.92	analyticsplatform
 ```
 
 Replace the IP address by the PUBLIC IP of the docker host. 
 
-## Services accessible on Streaming Platform
+## Services accessible on Analyticsplatform Platform
 The following service are available as part of the platform:
 
 Product | Type | Service | Url
 ------|------| --------| ----
-Redis | Development | Redis Commander | <http://nosqlplatform:38083>
-Cassandra | Development | Cassandra-Web | <http://nosqlplatform:33000>
-MongoDB | Management | Admin Mongo | <http://nosqlplatform:31234>
-MongoDB | Development | Mongo-Express | <http://nosqlplatform:38082>
-Elasticsearch | Development | Dejavu | <http://nosqlplatform:1358>
-Elasticsearch | Development | cerebro | <http://nosqlplatform:39000>
-Elasticsearch | Development | Kibana | <http://nosqlplatform:5601>
-Elasticsearch | Development | ElasticHQ | <http://nosqlplatform:35000>
-Solr | Management | Solr | <http://nosqlplatform:8983>
-Neo4J | Development | Neo4J | <http://nosqlplatform:7474>
-Grafana | Development | Grafana | <http://nosqlplatform:3010>
+Hue | Development | Hue | <http://nosqlplatform:28888>
 Zepplin | Development | Zeppelin | <http://nosqlplatform:38081>
 Jupyter | Development | Jupyter | <http://nosqlplatform:10000>
 

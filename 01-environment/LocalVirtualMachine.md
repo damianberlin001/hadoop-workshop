@@ -28,9 +28,9 @@ Now let's checkout the NoSQL Workshop project from github:
 ```
 # Get the project
 cd /home/bigdata
-sudo rm -R nosql-workshop/
-git clone https://github.com/gschmutz/nosql-workshop.git
-cd nosql-workshop/01-environment/docker
+sudo rm -R hadoop-workshop/
+git clone https://github.com/gschmutz/hadoop-workshop.git
+cd hadoop-workshop/01-environment/docker
 ```
 
 ## Start Environment
