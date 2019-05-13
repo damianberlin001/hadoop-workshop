@@ -79,7 +79,7 @@ services:
     hostname: namenode
     volumes:
       - ./container-volume/namenode:/hadoop/dfs/name
-      - ./transfer:/tmp/transfer
+      - ./data-transfer:/tmp/data-transfer
     ports:
       - "50070:50070"
     environment:
