@@ -15,7 +15,7 @@ Keep **Linux/Unix** for the **Select a platform** and click on **OS Only** and s
 
 ![Alt Image Text](./images/lightsail-create-instance-2.png "Lightsail Homepage")
 
-Scroll down to **Launch script** and add the the following script to the edit field. 
+Scroll down to **Launch script** and add the the following script 
 
 ```
 # Install Docker
@@ -38,14 +38,16 @@ sudo sysctl -w vm.max_map_count=262144
 
 # Get the project
 cd /home/ubuntu 
-git clone https://github.com/gschmutz/nosql-workshop.git
-chown -R ubuntu:ubuntu nosql-workshop
-cd nosql-workshop/01-environment/docker
+git clone https://github.com/gschmutz/hadoop-workshop.git
+chown -R ubuntu:ubuntu hadoop-workshop
+cd hadoop-workshop/01-environment/docker
 
 # Startup Environment
 sudo -E docker-compose up -d
 ```
 
+into the **Launch Script** edit field
+ 
 ![Alt Image Text](./images/lightsail-create-instance-3.png "Lightsail Homepage")
 
 Click on **Change SSH key pair** and leave the **Default** selected and then click on **Download** and save the file to a convinient location on your machine. Under **Choose your instance plan** click on the arrow on the right and select the **16 GB** instance.   

@@ -3,7 +3,7 @@
 ## Introduction
 In this section, you will download the sensor data and load that into HDFS using the Hue File Browser. From there you can perform tasks like create directories, navigate file systems and upload files to HDFS. In addition, you’ll perform a few other file-related tasks as well.  
 
-We assume that the **Analytics platform** decribed [here](../00-environment) is running and accessible. 
+We assume that the **Analytics platform** decribed [here](../01-environment) is running and accessible. 
 
 ##	 Accessing HDFS
 
@@ -124,7 +124,7 @@ The browser is positioned on the users home folder, which is `/user/hue` because
 
 We are going to upload some files using both the **Hadoop File Shell** as well as **Hue**. In practice you would choose the one fitting the use case best. 
 
-We will be using data of airports and carriers, available here [/00-environment/docker/data-transfer/flightdata](../00-environment/docker/data-transfer/flightdata).
+We will be using data of airports and carriers, available here [/01-environment/docker/data-transfer/flightdata](../01-environment/docker/data-transfer/flightdata).
 
 ### Creating folders
 
@@ -142,7 +142,7 @@ docker exec -ti namenode hadoop fs -mkdir /user/hue/flightdata
 
 ### Uploading flightdata files
 
-Now with the directories in place, we can start uploading data. The files we upload here are rather small and part of the github checkout. You can find them in the folder [/00-environment/docker/data-transfer/flightdata](../00-environment/docker/data-transfer/flightdata).
+Now with the directories in place, we can start uploading data. The files we upload here are rather small and part of the github checkout. You can find them in the folder [/01-environment/docker/data-transfer/flightdata](../01-environment/docker/data-transfer/flightdata).
 
 We can use **Hue** to upload files, but only if they do not exceed 100 MB in size. To upload a file, navigate into the `flightdata` directory and then click on **Upload**. Now you can either drag-and-drop the files to be uploaded or click on **Select files** to use the file browser to select the files to be uploaded.
 
@@ -249,7 +249,7 @@ docker exec -ti namenode hadoop fs -copyToLocal /user/hue/flightdata/carriers.sa
 the file should end up in the `data-transfer' folder on the docker machine. 
 
 ```
-ls 00-environment/docker/data-transfer/
+ls 01-environment/docker/data-transfer/
 ```
 
 ### Removing files
