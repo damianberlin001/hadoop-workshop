@@ -79,6 +79,7 @@ services:
     hostname: namenode
     volumes:
       - ./container-volume/namenode:/hadoop/dfs/name
+      - ./transfer:/tmp/transfer
     ports:
       - "50070:50070"
     environment:
@@ -203,6 +204,28 @@ services:
       - ./conf/spark-defaults.conf:/spark/conf/spark-defaults.conf
     restart: always
 
+  spark-worker-2:
+    image: bde2020/spark-worker:2.4.0-hadoop2.7
+    container_name: spark-worker-2
+    hostname: spark-worker-2
+    depends_on:
+      - spark-master
+    ports:
+      - "8082:8081"
+    env_file:
+      - ./conf/hadoop-hive.env  
+    environment:
+      SPARK_MASTER: "spark://spark-master:7077"
+ #     CORE_CONF_fs_defaultFS: hdfs://namenode:8020
+      SPARK_CONF_DIR: /conf
+      SPARK_WORKER_CORES: 2
+      SPARK_WORKER_MEMORY: 1g
+      SPARK_PUBLIC_DNS: ${PUBLIC_IP}
+    volumes:
+      - ./conf/hive-site.xml:/spark/conf/hive-site.xml
+      - ./conf/spark-defaults.conf:/spark/conf/spark-defaults.conf
+    restart: always
+
   spark-history:
     image: bde2020/spark-worker:2.4.0-hadoop2.7
     command: /spark/bin/spark-class org.apache.spark.deploy.history.HistoryServer
@@ -235,15 +258,11 @@ services:
     ports:
       - "10000:10000"
       - "10002:10002"
-    volumes:
-      - ./atlas-hooks:/opt/atlas-hooks
-      - ./conf/atlas-application.properties:/opt/hive/conf/atlas-application.properties
     env_file:
       - ./conf/hadoop-hive.env
     environment:
       - "HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore/metastore"
       - "SERVICE_PRECONDITION=hive-metastore:9083"
-      - "HIVE_AUX_JARS_PATH=/opt/atlas-hooks/apache-atlas-hive-hook-2.0.0/hook/hive"
     restart: always
 
   hive-metastore:

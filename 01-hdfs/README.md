@@ -1,17 +1,25 @@
-# Loading Sensor Data Into HDFS
-## Introduction
-In this section, you will download the sensor data and load that into HDFS using Ambari User Views. You will get introduced to the Ambari Files User View to manage files. You can perform tasks like create directories, navigate file systems and upload files to HDFS.  In addition, you’ll perform a few other file-related tasks as well.  Once you get the basics, you will create two directories and then load two files into HDFS using the Ambari Files User View.
+# Loading Data Into HDFS
 
-## Prequisites
- * Create a HDP sandbox VM on Azure or download the latest Hortonworks Sandbox
- * Data Set Used: Flights
- * Optional: Hortonworks ODBC driver installed and configured
+## Introduction
+In this section, you will download the sensor data and load that into HDFS using the Hue File Browser. From there you can perform tasks like create directories, navigate file systems and upload files to HDFS. In addition, you’ll perform a few other file-related tasks as well.  
+
+We assume that the **Analytics platform** decribed [here](../00-environment) is running and accessible. 
+
+##	 Accessing Hue
+
+In a browser window, navigate to <http://analyticsplatform:28888> and sign in with user `hue` and password `hue`. You should be forwarded to the **Hue** homepage. 
+
+ 
+
+
+
 
 ##	HDFS
 A single physical machine gets saturated with its storage capacity as the data grows. This growth drives the need to partition your data across separate machines. This type of File system that manages storage of data across a network of machines is called Distributed File Systems. HDFS is a core component of Apache Hadoop and is designed to store large files with streaming data access patterns, running on clusters of commodity hardware. With Hortonworks Data Platform HDP, HDFS is now expanded to support heterogeneous storage  media within the HDFS cluster.
 
 ### Download and Extract the flight data files
-1.	Download the sample data
+
+First let's download the sample data
 
 ```
 mkdir flight
