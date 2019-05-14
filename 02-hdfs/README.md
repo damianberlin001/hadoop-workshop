@@ -3,11 +3,11 @@
 ## Introduction
 In this section, you will download the sensor data and load that into HDFS using the Hue File Browser. From there you can perform tasks like create directories, navigate file systems and upload files to HDFS. In addition, you’ll perform a few other file-related tasks as well.  
 
+The Hadoop Distributed File System (HDFS) is a core component of Apache Hadoop and is designed to store large files with streaming data access patterns, running on clusters of commodity hardware. 
+
 We assume that the **Analytics platform** decribed [here](../01-environment) is running and accessible. 
 
 ##	 Accessing HDFS
-
-The Hadoop Distributed File System (HDFS) is a core component of Apache Hadoop and is designed to store large files with streaming data access patterns, running on clusters of commodity hardware. 
 
 There various ways for accessing HDFS. In this workshop we will use the following
 

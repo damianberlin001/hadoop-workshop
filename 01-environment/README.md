@@ -30,10 +30,16 @@ The following service are available as part of the platform:
 
 Product | Type | Service | Url
 ------|------| --------| ----
-Hue | Development | Hue | <http://nosqlplatform:28888>
-Zepplin | Development | Zeppelin | <http://nosqlplatform:38081>
-Jupyter | Development | Jupyter | <http://nosqlplatform:10000>
-
+Hue | Development | Hue | <http://analyticsplatform:28888>
+Zepplin | Development | Zeppelin | <http://analyticsplatform:38081>
+Jupyter | Development | Jupyter | <http://analyticsplatform:10000>
+Spark UI | Management  | Spark | <http://analyticsplatform:8080>
+Spark History Server UI | Management | Spark | <http://analyticsplatform:18080>
+Namenode UI | Management  | Haoop HDFS | <http://analyticsplatform:50070>
+Datanode-1 UI | Management  | Haoop HDFS | <http://analyticsplatform:50075>
+Datanode-2 UI | Management  | Haoop HDFS | <http://analyticsplatform:50076>
+Kafka Manager | Management | Kafka | <http://analyticsplatform:29000>
+Minio UI | Management | Minio | <http://analyticsplatform:9000>
 
 ## Workshop based on IMDd
 
