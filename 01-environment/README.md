@@ -41,12 +41,3 @@ Datanode-2 UI | Management  | Haoop HDFS | <http://analyticsplatform:50076>
 Kafka Manager | Management | Kafka | <http://analyticsplatform:29000>
 Minio UI | Management | Minio | <http://analyticsplatform:9000>
 
-## Workshop based on IMDd
-
-For the workshop we are going to use data from [IMDb](https://www.imdb.com/). 
-
-The following diagram shows the conceptual model of IMDb. 
-
-![Alt Image Text](./images/IMDB-domain-and-context-data-model.png "Lightsail Homepage")
-
-The data has been downloaded using the following Jupyter notebook (link to be added). 
