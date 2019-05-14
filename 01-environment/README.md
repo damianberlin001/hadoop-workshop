@@ -32,7 +32,7 @@ Product | Type | Service | Url
 ------|------| --------| ----
 Hue | Development | Hue | <http://analyticsplatform:28888>
 Zepplin | Development | Zeppelin | <http://analyticsplatform:38081>
-Jupyter | Development | Jupyter | <http://analyticsplatform:10000>
+Jupyter | Development | Jupyter | <http://analyticsplatform:38888>
 Spark UI | Management  | Spark | <http://analyticsplatform:8080>
 Spark History Server UI | Management | Spark | <http://analyticsplatform:18080>
 Namenode UI | Management  | Haoop HDFS | <http://analyticsplatform:50070>
