@@ -122,27 +122,27 @@ services:
 
     restart: always
 
-  resourcemanager:
-    image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.1.1-java8
-    container_name: resourcemanager
-    hostname: resourcemanager
-    depends_on:
-      - namenode
-      - datanode-1
-    env_file:
-      - ./conf/hadoop.env
-    restart: always
-  
-  nodemanager:
-    image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.1.1-java8
-    container_name: nodemanager
-    hostname: nodemanager
-    depends_on:
-      - namenode
-      - datanode-1
-    env_file:
-      - ./conf/hadoop.env
-    restart: always
+#  resourcemanager:
+#    image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.1.1-java8
+#    container_name: resourcemanager
+#    hostname: resourcemanager
+#    depends_on:
+#      - namenode
+#      - datanode-1
+#    env_file:
+#      - ./conf/hadoop.env
+#    restart: always
+#  
+#  nodemanager:
+#    image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.1.1-java8
+#    container_name: nodemanager
+#    hostname: nodemanager
+#    depends_on:
+#      - namenode
+#      - datanode-1
+#    env_file:
+#      - ./conf/hadoop.env
+#    restart: always
   
   historyserver:
     image: bde2020/hadoop-historyserver:2.0.0-hadoop3.1.1-java8
@@ -155,6 +155,8 @@ services:
       - datanode-1
     env_file:
       - ./conf/hadoop.env
+    environment:
+      SERVICE_PRECONDITION: "namenode:9870 datanode:9864 resourcemanager:8088"      
     restart: always
 
   spark-master:
