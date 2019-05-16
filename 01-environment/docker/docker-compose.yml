@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3'
 services:
   zookeeper-1:
     image: confluentinc/cp-zookeeper:5.2.1
@@ -86,9 +86,6 @@ services:
       - CLUSTER_NAME=test
     env_file:
       - ./conf/hadoop.env
-    healthcheck:
-      interval: 5s
-      retries: 100 
     restart: always
 
   datanode-1:
@@ -105,10 +102,7 @@ services:
       - SERVICE_PRECONDITION="namenode:9870"      
     depends_on:
       namenode:
-        condition: service_healthy
-    healthcheck:
-      interval: 5s
-      retries: 100 
+
     restart: always
 
   datanode_2:
@@ -125,10 +119,7 @@ services:
       - SERVICE_PRECONDITION="namenode:9870"      
     depends_on:
       namenode:
-        condition: service_healthy
-    healthcheck:
-      interval: 5s
-      retries: 100 
+
     restart: always
 
   resourcemanager:
