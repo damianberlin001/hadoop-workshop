@@ -81,7 +81,7 @@ services:
       - ./container-volume/namenode:/hadoop/dfs/name
       - ./data-transfer:/tmp/data-transfer
     ports:
-      - "50070:50070"
+      - "9870:9870"
     environment:    
       - CLUSTER_NAME=test
     env_file:
@@ -102,7 +102,7 @@ services:
     env_file:
       - ./conf/hadoop.env
     environment:
-      - SERVICE_PRECONDITION="namenode:50070"      
+      - SERVICE_PRECONDITION="namenode:9870"      
     depends_on:
       namenode:
         condition: service_healthy
@@ -122,7 +122,7 @@ services:
     env_file:
       - ./conf/hadoop.env
     environment:
-      - SERVICE_PRECONDITION="namenode:50070"      
+      - SERVICE_PRECONDITION="namenode:9870"      
     depends_on:
       namenode:
         condition: service_healthy
