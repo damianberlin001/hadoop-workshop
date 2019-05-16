@@ -101,7 +101,7 @@ services:
     environment:
       - SERVICE_PRECONDITION="namenode:9870"      
     depends_on:
-      namenode:
+      - namenode
 
     restart: always
 
@@ -118,7 +118,7 @@ services:
     environment:
       - SERVICE_PRECONDITION="namenode:9870"      
     depends_on:
-      namenode:
+      - namenode
 
     restart: always
 
