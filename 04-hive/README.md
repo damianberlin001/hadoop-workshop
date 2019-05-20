@@ -282,7 +282,6 @@ The next step will be to provide that data to potential consumers in a more effi
 The Optimized Row Columnar (new Apache ORC project) file format provides a highly efficient way to store Hive data. It was designed to overcome limitations of the other Hive file formats. Using ORC files improves performance when Hive is reading, writing, and processing data.
 
 To use the ORC format, specify ORC as the file format when creating the table `CREATE TABLE ... STORED AS ORC`
-```
 
 We will create two ORC tables, one for geolocation and one for trucks, which will be created from the data in the **geolocation_stage** and **trucks_stage** tables (which are based on the less optimal text format).
 
