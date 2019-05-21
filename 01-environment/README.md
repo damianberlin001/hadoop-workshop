@@ -1,4 +1,4 @@
-# NoSQL Platform on Docker
+# Hadoop Platform on Docker
 
 ## Provisioning environment
 The environment for this course is completly based on docker containers. 
